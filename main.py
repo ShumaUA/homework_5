@@ -64,14 +64,39 @@
 
 
 
-text = input("\nEnter text: ")
-Letters, Numbers, Other_symbols = 0, 0, 0
-for i in text:
-    if i.isalpha():
-        Letters += 1
-    elif i.isdigit():
-        Numbers += 1
-    else:
-        Other_symbols += 1
-print(f"{Letters}{Numbers}{Other_symbols}")
+# text = input("\nEnter text: ")
+# Letters, Numbers, Other_symbols = 0, 0, 0
+#
+# for i in text:
+#
+#     if i.isalpha():
+#         Letters += 1
+#
+#     elif i.isdigit():
+#         Numbers += 1
+#
+#     else:
+#         Other_symbols += 1
+#
+# print(f"Letters in text: {Letters}, \nNumbers in text: {Numbers}, \nOther symbols in text: {Other_symbols}")
+
+
+
+
+############# hm4_task_2 #############
+
+
+'''
+Користувач вводить з клавіатури рядок та символ для пошуку.
+Порахуйте скільки разів у рядку зустрічається потрібний символ. Отримане число виведіть на екран.
+'''
+
+
+# text = input("\nEnter text: ")
+# find = input("\nEnter character to search: ")
+# ltext = text.lower()
+# print("\nThe desired character occurs:", text.count(find), end=" times")
+# print()
+
+
 
