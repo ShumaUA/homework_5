@@ -92,11 +92,10 @@
 '''
 
 
-# text = input("\nEnter text: ")
-# find = input("\nEnter character to search: ")
-# ltext = text.lower()
-# print("\nThe desired character occurs:", text.count(find), end=" times")
-# print()
+text = input("\nEnter text: ").lower()
+find = input("\nEnter character to search: ").lower()
+print("\nThe desired character occurs:", text.count(find), end=" times")
+print()
 
 
 
