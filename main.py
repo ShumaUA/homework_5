@@ -139,14 +139,56 @@
 '''
 
 
-text = "0123456789"
-print("\n1. The third character of the string is:", text[2], end=".")
-print("\n2. The penultimate character of the string is:", text[-2], end=".")
-print("\n3. The first five characters of the string are:", text[:5], end=".")
-print("\n4. String except for the last two characters is:", text[:-2], end= ".")
-print("\n5. Even characters of this string:", text[::2], end=".")
-print("\n6. Odd characters of this string:", text[1::2], end=".")
-print("\n7. Characters in reverse order of this string:", text[::-1], end=".")
-print("\n8. Characters in reverse order through one of this string:", text[::-2], end=".")
-print("\n9. String length is:", len(text), end=" symbols.")
+# text = "0123456789"
+# print("\n1. The third character of the string is:", text[2], end=".")
+# print("\n2. The penultimate character of the string is:", text[-2], end=".")
+# print("\n3. The first five characters of the string are:", text[:5], end=".")
+# print("\n4. String except for the last two characters is:", text[:-2], end= ".")
+# print("\n5. Even characters of this string:", text[::2], end=".")
+# print("\n6. Odd characters of this string:", text[1::2], end=".")
+# print("\n7. Characters in reverse order of this string:", text[::-1], end=".")
+# print("\n8. Characters in reverse order through one of this string:", text[::-2], end=".")
+# print("\n9. String length is:", len(text), end=" symbols.")
+# print()
+
+
+
+############# hm4_task_additional #############
+
+
+
+'''
+Додатково:
+Є певний текст. Реалізуйте наступну функціональність:
+■ Змінити текст таким чином, щоб кожне речення починалися з великої літери;
+■ Порахуйте скілки разів цифри зустрічаються у тексті;
+■ Порахуйте скільки разів розділові знаки зустрічаються в тексті;
+■ Порахуйте кількість знаків оклику в тексті.
+'''
+
+
+import string
+text = "after Arana assumed his new and powerful position, an American embassy official stated in a dispatch that Arana was the type of personality that might assume dictatorial power.\
+on 16 December 1945, Arévalo was seriously injured in a car accident and incapacitated for a period.The leaders of the Revolutionary Action Party (PAR),\
+the party that supported the government, were afraid that Arana would take the opportunity to launch a coup!\
+a handful of its leaders approached Arana and made a deal with him, which later came to be known as the Pacto del Barranco (Pact of the Ravine).\
+arana agreed to refrain from seizing power with the military; in return, the PAR agreed to support Arana's candidacy in the next presidential election, scheduled for November 1950.\
+this undertaking was given in writing! However, it was kept a secret; the American embassy only learned of it in 1947.\
+arévalo himself recovered swiftly, but was forced to support the agreement!"
+
+replaced_text = text.capitalize()
+count_number = sum(i.isdigit() for i in text )
+count_punctuation = sum(i in string.punctuation for i in text)
+count_exclamation_mark = text.count("!")
+
+print(replaced_text)
+print()
+
+print(count_number)
+print()
+
+print(count_punctuation)
+print()
+
+print(count_exclamation_mark)
 print()
