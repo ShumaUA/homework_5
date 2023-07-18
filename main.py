@@ -92,10 +92,27 @@
 '''
 
 
-text = input("\nEnter text: ").lower()
-find = input("\nEnter character to search: ").lower()
-print("\nThe desired character occurs:", text.count(find), end=" times")
+# text = input("\nEnter text: ").lower()
+# find = input("\nEnter character to search: ").lower()
+# print("\nThe desired character occurs:", text.count(find), end=" times")
+# print()
+
+
+
+
+'''
+ Користувач вводить з клавіатури рядок, слово для пошуку, слово для заміни.
+ Зробіть у рядку заміну одного слова на інше. Отриманий рядок на екрані.
+'''
+
+
+text = input("\nEnter text: ")
+find = input("\nEnter word to search: ")
+print(f"\nThe desired word '{find}' occurs:", text.count(find), end=" times.")
 print()
 
+old_word = input("\nWhat word should be replaced in the text: ")
+new_word = input("\nEnter new word:")
+print()
 
-
+print(f"\nAll the words '{old_word}' are replaced by a '{new_word}' .", "\nNew text is: ", text.replace(old_word, new_word))
