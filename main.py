@@ -52,9 +52,8 @@
 
 
 
-
-
 ############# hm4_task_1 #############
+
 
 
 '''
@@ -82,8 +81,8 @@
 
 
 
-
 ############# hm4_task_2 #############
+
 
 
 '''
@@ -99,6 +98,9 @@
 
 
 
+############# hm4_task_3 #############
+
+
 
 '''
  Користувач вводить з клавіатури рядок, слово для пошуку, слово для заміни.
@@ -106,13 +108,45 @@
 '''
 
 
-text = input("\nEnter text: ")
-find = input("\nEnter word to search: ")
-print(f"\nThe desired word '{find}' occurs:", text.count(find), end=" times.")
-print()
+# text = input("\nEnter text: ")
+# find = input("\nEnter word to search: ")
+# print(f"\nThe desired word '{find}' occurs:", text.count(find), end=" times.")
+# print()
+#
+# old_word = input("\nWhat word should be replaced in the text: ")
+# new_word = input("\nEnter new word:")
+# print()
+#
+# print(f"\nAll the words '{old_word}' are replaced by a '{new_word}' .", "\nNew text is: ", text.replace(old_word, new_word))
 
-old_word = input("\nWhat word should be replaced in the text: ")
-new_word = input("\nEnter new word:")
-print()
 
-print(f"\nAll the words '{old_word}' are replaced by a '{new_word}' .", "\nNew text is: ", text.replace(old_word, new_word))
+
+############# hm4_task_4 #############
+
+
+
+'''
+Дано рядок. (зробити зрізи)
+- Спершу виведіть третій символ цього рядка.
+- У другому рядку виведіть передостанній символ цього рядка.
+- У третьому рядку виведіть перші п'ять символів цього рядка.
+- У четвертому рядку виведіть весь рядок, крім двох останніх символів.
+- У п'ятому рядку виведіть усі символи з парними індексами (вважаючи, що індексація починається з 0, тому символи виводяться з першого).
+- У шостому рядку виведіть усі символи з непарними індексами, тобто, починаючи з другого символу рядка.
+- У сьомому рядку виведіть усі символи у зворотному порядку.
+- У восьмому рядку виведіть усі символи рядка через один у зворотному порядку, починаючи з останнього.
+- У дев'ятому рядку виведіть довжину цього рядка.
+'''
+
+
+text = "0123456789"
+print("\n1. The third character of the string is:", text[2], end=".")
+print("\n2. The penultimate character of the string is:", text[-2], end=".")
+print("\n3. The first five characters of the string are:", text[:5], end=".")
+print("\n4. String except for the last two characters is:", text[:-2], end= ".")
+print("\n5. Even characters of this string:", text[::2], end=".")
+print("\n6. Odd characters of this string:", text[1::2], end=".")
+print("\n7. Characters in reverse order of this string:", text[::-1], end=".")
+print("\n8. Characters in reverse order through one of this string:", text[::-2], end=".")
+print("\n9. String length is:", len(text), end=" symbols.")
+print()
