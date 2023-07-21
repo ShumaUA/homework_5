@@ -211,52 +211,54 @@
 
 
 
-# import random
-# print()
-#
-# str = []
-# temp_str = []
-# sum_negative = 0
-# sum_even = 0
-# sum_odd = 0
-# multi_ix3 = 1
-# sum_first_end = 0
-#
-#
-# for i in range(10):
-#     str.append(random.randint(-10,10))
-# print(f"<-----  list of random numbers  -----> \n{str}")
-# print()
-#
-# for j in str:
-#
-#     if j < 0:
-#         sum_negative += j
-#     elif j % 2 == 0:
-#         sum_even += j
-#     elif j % 2 != 0:
-#         sum_odd += j
-#
-# for j in str[3::3]:
-#     multi_ix3 *= j
-#
-# for j in str:
-#     if j > 0:
-#         temp_str.append(j)
-#
-# for j in temp_str[1:-1]:
-#     sum_first_end += j
-#
-# if sum_first_end == 0:
-#     sum_first_end = "-------->Not enough positive numbers in the list"
-#
-#
-# print(f"1.The sum of the negative numbers in the list is: {sum_negative}", end=".")
-# print(f"\n2.The sum of the pair numbers in the list is: {sum_even}", end=".")
-# print(f"\n3.The sum of the odd numbers in the list is: {sum_odd}", end=".")
-# print(f"\n4.The multiplication of numbers with an index multiple of 3 in the list is: {multi_ix3}", end=".")
-# print(f"\n5.The multiplying the maximum and minimum number in the list is: {min(str) * max(str)}", end=".")
-# print(f"\n6.The sum of the second and penultimate positive number in the list is: {sum_first_end}", end=".")
+import random
+print()
+
+str = []
+temp_str = []
+sum_negative = 0
+sum_even = 0
+sum_odd = 0
+multi_ix3 = 1
+sum_first_end = 0
+
+
+for i in range(10):
+    str.append(random.randint(-10,10))
+print(f"<-----  list of random numbers  -----> \n{str}")
+print()
+
+for j in str:
+
+    if j < 0:
+        sum_negative += j
+
+for j in str:
+    if j % 2 == 0:
+        sum_even += j
+    elif j % 2 != 0:
+        sum_odd += j
+
+for j in str[3::3]:
+    multi_ix3 *= j
+
+for j in str:
+    if j > 0:
+        temp_str.append(j)
+
+for j in temp_str[1:-1]:
+    sum_first_end += j
+
+if sum_first_end == 0:
+    sum_first_end = "-------->Not enough positive numbers in the list"
+
+
+print(f"1.The sum of the negative numbers in the list is: {sum_negative}", end=".")
+print(f"\n2.The sum of the even numbers in the list is: {sum_even}", end=".")
+print(f"\n3.The sum of the odd numbers in the list is: {sum_odd}", end=".")
+print(f"\n4.The multiplication of numbers with an index multiple of 3 in the list is: {multi_ix3}", end=".")
+print(f"\n5.The multiplying the maximum and minimum number in the list is: {min(str) * max(str)}", end=".")
+print(f"\n6.The sum of the second and penultimate positive number in the list is: {sum_first_end}", end=".")
 
 
 
@@ -272,3 +274,41 @@
 ■ Створити список цілих, що містить лише негативні числа з першого списку;
 ■ Створити список цілих, що містить лише позитивні числа з першого списку.
 '''
+
+
+# import random
+#
+# str = []
+# str_even = []
+# str_odd = []
+# str_negative = []
+# str_positive = []
+#
+# print()
+#
+# for i in range(20):
+#     str.append(random.randint(-50,50))
+#
+# print(f"<-----  list of random numbers  -----> \n{str}")
+# print()
+#
+#
+# for i in str:
+#
+#     if i % 2 == 0:
+#         str_even.append(i)
+#     elif i % 2 !=0:
+#         str_odd.append(i)
+#
+# for i in str:
+#
+#     if i < 0:
+#         str_negative.append(i)
+#     elif i >= 0:
+#         str_positive.append(i)
+#
+#
+# print(f"1.The even numbers in the list is: {str_even}", end=".")
+# print(f"\n2.The odd numbers in the list is: {str_odd}", end=".")
+# print(f"\n3.The negative numbers in the list is: {str_negative}", end=".")
+# print(f"\n4.The positive numbers in the list is: {str_positive}", end=".")
