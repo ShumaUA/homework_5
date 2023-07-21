@@ -167,28 +167,44 @@
 '''
 
 
-import string
-text = "after Arana assumed his new and powerful position, an American embassy official stated in a dispatch that Arana was the type of personality that might assume dictatorial power.\
-on 16 December 1945, Arévalo was seriously injured in a car accident and incapacitated for a period.The leaders of the Revolutionary Action Party (PAR),\
-the party that supported the government, were afraid that Arana would take the opportunity to launch a coup!\
-a handful of its leaders approached Arana and made a deal with him, which later came to be known as the Pacto del Barranco (Pact of the Ravine).\
-arana agreed to refrain from seizing power with the military; in return, the PAR agreed to support Arana's candidacy in the next presidential election, scheduled for November 1950.\
-this undertaking was given in writing! However, it was kept a secret; the American embassy only learned of it in 1947.\
-arévalo himself recovered swiftly, but was forced to support the agreement!"
+# import string
+# text = "after Arana assumed his new and powerful position, an American embassy official stated in a dispatch that Arana was the type of personality that might assume dictatorial power.\
+# on 16 December 1945, Arévalo was seriously injured in a car accident and incapacitated for a period.The leaders of the Revolutionary Action Party (PAR),\
+# the party that supported the government, were afraid that Arana would take the opportunity to launch a coup!\
+# a handful of its leaders approached Arana and made a deal with him, which later came to be known as the Pacto del Barranco (Pact of the Ravine).\
+# arana agreed to refrain from seizing power with the military; in return, the PAR agreed to support Arana's candidacy in the next presidential election, scheduled for November 1950.\
+# this undertaking was given in writing! However, it was kept a secret; the American embassy only learned of it in 1947.\
+# arévalo himself recovered swiftly, but was forced to support the agreement!"
+#
+# replaced_text = text.capitalize()
+# count_number = sum(i.isdigit() for i in text )
+# count_punctuation = sum(i in string.punctuation for i in text)
+# count_exclamation_mark = text.count("!")
+#
+# print(replaced_text)
+# print()
+#
+# print(count_number)
+# print()
+#
+# print(count_punctuation)
+# print()
+#
+# print(count_exclamation_mark)
+# print()
 
-replaced_text = text.capitalize()
-count_number = sum(i.isdigit() for i in text )
-count_punctuation = sum(i in string.punctuation for i in text)
-count_exclamation_mark = text.count("!")
 
-print(replaced_text)
-print()
 
-print(count_number)
-print()
+############# hm5_task_1 #############
 
-print(count_punctuation)
-print()
 
-print(count_exclamation_mark)
-print()
+
+'''
+У списку цілих, заповненому випадковими числами обчислити:
+■ Суму негативних чисел;
+■ Суму парних чисел;
+■ Суму непарних чисел;
+■ Добуток елементів з кратними індексами 3;
+■ Добуток елементів між мінімальним та максимальним елементом;
+■ Суму елементів, що знаходяться між першим та останнім позитивними елементами.
+'''
