@@ -257,3 +257,18 @@
 # print(f"\n4.The multiplication of numbers with an index multiple of 3 in the list is: {multi_ix3}", end=".")
 # print(f"\n5.The multiplying the maximum and minimum number in the list is: {min(str) * max(str)}", end=".")
 # print(f"\n6.The sum of the second and penultimate positive number in the list is: {sum_first_end}", end=".")
+
+
+
+############# hm5_task_2 #############
+
+
+
+'''
+Є список цілих, заповнений випадковими числами.
+На підставі даних цього масиву потрібно:
+■ Створити список цілих, що містить лише парні числа з першого списку;
+■ Створити список цілих, що містить лише непарні числа з першого списку;
+■ Створити список цілих, що містить лише негативні числа з першого списку;
+■ Створити список цілих, що містить лише позитивні числа з першого списку.
+'''
