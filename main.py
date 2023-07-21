@@ -211,54 +211,74 @@
 
 
 
-import random
-print()
+##################### v1
 
-str = []
-temp_str = []
-sum_negative = 0
-sum_even = 0
-sum_odd = 0
-multi_ix3 = 1
-sum_first_end = 0
+# import random
+# print()
+#
+# str = []
+# temp_str = []
+# sum_negative = 0
+# sum_even = 0
+# sum_odd = 0
+# multi_ix3 = 1
+# n1 = n2 = 0
+#
+# for i in range(10):
+#     str.append(random.randint(-10,10))
+# print(f"<-----  list of random numbers  -----> \n{str}")
+# print()
+#
+#
+#
+# for j in str:
+#     if j < 0:
+#         sum_negative += j
+#
+# for j in str:
+#     if j % 2 == 0:
+#         sum_even += j
+#     elif j % 2 != 0:
+#         sum_odd += j
+#
+# for j in str[3::3]:
+#     multi_ix3 *= j
+#
+# for n1, j in enumerate(str):
+#     if j > 0:
+#         break
+#
+# for n2, j in enumerate(reversed(str)):
+#     if j > 0:
+#         break
+#
+# sum_first_end = sum(str[n1+1: -n2 -1])
 
+##################### v2
 
-for i in range(10):
-    str.append(random.randint(-10,10))
-print(f"<-----  list of random numbers  -----> \n{str}")
-print()
+# import math
+# import random
+# str = []
+#
+# for i in range(10):
+#     str.append(random.randint(-10,10))
+# print(f"<-----  list of random numbers  -----> \n{str}")
+# print()
+#
+# sum_negative = sum(i for i in str if i < 0)
+# sum_even = sum(i for i in str if i % 2 == 0)
+# sum_odd = sum(i for i in str if i % 2 != 0)
+# multi_ix3 = math.prod(str[3::3])
+##################################### последнее условие не представляю как написать в 1 строчку ).
 
-for j in str:
+##################################### принты для обеих версий
 
-    if j < 0:
-        sum_negative += j
-
-for j in str:
-    if j % 2 == 0:
-        sum_even += j
-    elif j % 2 != 0:
-        sum_odd += j
-
-for j in str[3::3]:
-    multi_ix3 *= j
-
-for j in str:
-    if j > 0:
-        temp_str.append(j)
-
-for j in temp_str[1:-1]:
-    sum_first_end += j
-
-if sum_first_end == 0:
-    sum_first_end = "-------->Not enough positive numbers in the list"
-
-
-print(f"1.The sum of the negative numbers in the list is: {sum_negative}", end=".")
-print(f"\n2.The sum of the even numbers in the list is: {sum_even}", end=".")
-print(f"\n3.The sum of the odd numbers in the list is: {sum_odd}", end=".")
-print(f"\n4.The multiplication of numbers with an index multiple of 3 in the list is: {multi_ix3}", end=".")
-print(f"\n5.The multiplying the maximum and minimum number in the list is: {min(str) * max(str)}", end=".")
-print(f"\n6.The sum of the second and penultimate positive number in the list is: {sum_first_end}", end=".")
+# print(f"1.The sum of the negative numbers in the list is: {sum_negative}", end=".")
+# print(f"\n2.The sum of the even numbers in the list is: {sum_even}", end=".")
+# print(f"\n3.The sum of the odd numbers in the list is: {sum_odd}", end=".")
+# print(f"\n4.The multiplication of numbers with an index multiple of 3 in the list is: {multi_ix3}", end=".")
+# print(f"\n5.The multiplying the maximum and minimum number in the list is: {min(str) * max(str)}", end=".")
+# print(f"\n6.The sum of the second and penultimate positive number in the list is: {sum_first_end}", end=".")
 
 
 
