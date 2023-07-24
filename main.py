@@ -368,7 +368,6 @@
 
 
 import random
-
 matrix = []
 print()
 
@@ -376,14 +375,28 @@ for i in range(10):
     matrix.append([])
     for j in range(10):
         matrix[i].append(random.randint(10, 99))
-
 print("<--matrix of random numbers-->")
 print()
 
 for i in range(len(matrix)):
-    for j in range(len(matrix[i])):
+    for j in range(len(matrix)):
         print(matrix[i][j], end="|" )
     print()
 
+sum_main_diag = 0
+for i in range(len(matrix)):
+    for j in range(len(matrix)):
+        if matrix[i] == matrix[j]:
+            sum_main_diag += matrix[i][j]
+print()
+print(f"The sum of the main diagonal of a matrix is: {sum_main_diag}" , end=".")
 
+temp_matrix = []
+for i in range(len(matrix)-1, 0, -1):
+    for j in range(len(matrix)):
+        if i + j == len(matrix) - 1:
+            temp_matrix.append(matrix[i][j])
+print()
+print(f"The minimum value of the secondary diagonal of the matrix is: ", min(temp_matrix), end=".")
+print(f"\nThe maximum value of the secondary diagonal of the matrix is: ", max(temp_matrix), end=".")
 
