@@ -222,7 +222,8 @@
 # sum_even = 0
 # sum_odd = 0
 # multi_ix3 = 1
-# n1 = n2 = 0
+# n1_pos_index = n2_pos_index = 0
+# sum_first_end = 0
 #
 # for i in range(10):
 #     str.append(random.randint(-10,10))
@@ -244,15 +245,18 @@
 # for j in str[3::3]:
 #     multi_ix3 *= j
 #
-# for n1, j in enumerate(str):
-#     if j > 0:
+# for j in range(len(str)):
+#     if str[j] > 0:
+#         n1_pos_index = j
 #         break
 #
-# for n2, j in enumerate(reversed(str)):
-#     if j > 0:
+# for j in range(len(str) -1, -1, -1):
+#     if str[j] > 0:
+#         n2_pos_index = j
 #         break
 #
-# sum_first_end = sum(str[n1+1: -n2 -1])
+# for i in range(n1_pos_index + 1, n2_pos_index):
+#     sum_first_end += str[i]
 
 ##################### v2
 
@@ -266,10 +270,24 @@
 # print()
 #
 # sum_negative = sum(i for i in str if i < 0)
+#
 # sum_even = sum(i for i in str if i % 2 == 0)
+#
 # sum_odd = sum(i for i in str if i % 2 != 0)
+#
 # multi_ix3 = math.prod(str[3::3])
-##################################### последнее условие не представляю как написать в 1 строчку ).
+#
+# n1 = n2 = 0
+# for n1, j in enumerate(str):
+#     if j > 0:
+#         break
+#
+# for n2, j in enumerate(reversed(str)):
+#     if j > 0:
+#         break
+#
+# sum_first_end = sum(str[n1+1: -n2 -1])
+
 
 ##################################### принты для обеих версий
 
@@ -332,3 +350,10 @@
 # print(f"\n2.The odd numbers in the list is: {str_odd}", end=".")
 # print(f"\n3.The negative numbers in the list is: {str_negative}", end=".")
 # print(f"\n4.The positive numbers in the list is: {str_positive}", end=".")
+
+
+
+############# hm5_add_task #############
+
+
+
