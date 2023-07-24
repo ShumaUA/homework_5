@@ -51,17 +51,13 @@
 #         i = 0
 
 
-
 ############# hm4_task_1 #############
-
 
 
 '''
 Користувач вводить рядок з клавіатури.
 Порахуйте кількість літер, цифр у рядку. Виведіть обидві кількості на екран. (використовувати цикл)
 '''
-
-
 
 # text = input("\nEnter text: ")
 # Letters, Numbers, Other_symbols = 0, 0, 0
@@ -80,9 +76,7 @@
 # print(f"Letters in text: {Letters}, \nNumbers in text: {Numbers}, \nOther symbols in text: {Other_symbols}")
 
 
-
 ############# hm4_task_2 #############
-
 
 
 '''
@@ -90,23 +84,19 @@
 Порахуйте скільки разів у рядку зустрічається потрібний символ. Отримане число виведіть на екран.
 '''
 
-
 # text = input("\nEnter text: ").lower()
 # find = input("\nEnter character to search: ").lower()
 # print("\nThe desired character occurs:", text.count(find), end=" times")
 # print()
 
 
-
 ############# hm4_task_3 #############
-
 
 
 '''
  Користувач вводить з клавіатури рядок, слово для пошуку, слово для заміни.
  Зробіть у рядку заміну одного слова на інше. Отриманий рядок на екрані.
 '''
-
 
 # text = input("\nEnter text: ")
 # find = input("\nEnter word to search: ")
@@ -120,9 +110,7 @@
 # print(f"\nAll the words '{old_word}' are replaced by a '{new_word}' .", "\nNew text is: ", text.replace(old_word, new_word))
 
 
-
 ############# hm4_task_4 #############
-
 
 
 '''
@@ -138,7 +126,6 @@
 - У дев'ятому рядку виведіть довжину цього рядка.
 '''
 
-
 # text = "0123456789"
 # print("\n1. The third character of the string is:", text[2], end=".")
 # print("\n2. The penultimate character of the string is:", text[-2], end=".")
@@ -152,9 +139,7 @@
 # print()
 
 
-
 ############# hm4_task_additional #############
-
 
 
 '''
@@ -165,7 +150,6 @@
 ■ Порахуйте скільки разів розділові знаки зустрічаються в тексті;
 ■ Порахуйте кількість знаків оклику в тексті.
 '''
-
 
 # import string
 # text = "after Arana assumed his new and powerful position, an American embassy official stated in a dispatch that Arana was the type of personality that might assume dictatorial power.\
@@ -194,9 +178,7 @@
 # print()
 
 
-
 ############# hm5_task_1 #############
-
 
 
 '''
@@ -208,8 +190,6 @@
 ■ Добуток елементів між мінімальним та максимальним елементом;
 ■ Суму елементів, що знаходяться між першим та останнім позитивними елементами.
 '''
-
-
 
 ##################### v1
 
@@ -299,9 +279,7 @@
 # print(f"\n6.The sum of the second and penultimate positive number in the list is: {sum_first_end}", end=".")
 
 
-
 ############# hm5_task_2 #############
-
 
 
 '''
@@ -312,7 +290,6 @@
 ■ Створити список цілих, що містить лише негативні числа з першого списку;
 ■ Створити список цілих, що містить лише позитивні числа з першого списку.
 '''
-
 
 # import random
 #
@@ -352,9 +329,7 @@
 # print(f"\n4.The positive numbers in the list is: {str_positive}", end=".")
 
 
-
 ############# hm5_add_task #############
-
 
 
 '''
@@ -366,8 +341,8 @@
 - ввести з клавіатури порядковий номер одного стовпця і потім іншого стовпця і поміняти їх місцями в матрицю (аналогічно зробити з рядком)
 '''
 
-
 import random
+
 matrix = []
 print()
 
@@ -376,11 +351,10 @@ for i in range(10):
     for j in range(10):
         matrix[i].append(random.randint(10, 99))
 print("<--matrix of random numbers-->")
-print()
 
 for i in range(len(matrix)):
     for j in range(len(matrix)):
-        print(matrix[i][j], end="|" )
+        print(matrix[i][j], end="|")
     print()
 
 sum_main_diag = 0
@@ -388,15 +362,43 @@ for i in range(len(matrix)):
     for j in range(len(matrix)):
         if matrix[i] == matrix[j]:
             sum_main_diag += matrix[i][j]
-print()
-print(f"The sum of the main diagonal of a matrix is: {sum_main_diag}" , end=".")
 
 temp_matrix = []
-for i in range(len(matrix)-1, 0, -1):
+for i in range(len(matrix) - 1, 0, -1):
     for j in range(len(matrix)):
         if i + j == len(matrix) - 1:
             temp_matrix.append(matrix[i][j])
-print()
-print(f"The minimum value of the secondary diagonal of the matrix is: ", min(temp_matrix), end=".")
-print(f"\nThe maximum value of the secondary diagonal of the matrix is: ", max(temp_matrix), end=".")
 
+print("\nWhich column are you interested in?")
+n_column_select = int(input("Enter column number from 1 to 10: "))
+if n_column_select <= 0 or n_column_select > 10:
+    print("\nIncorrect menu number!")
+
+print("\nWhich line are you interested in?")
+n_line_select = int(input("Enter line number from 1 to 10: "))
+if n_line_select <= 0 or n_line_select > 10:
+    print("\nIncorrect menu number!")
+
+numbers_column = []
+for i in range(len(matrix)):
+    numbers_column.append(matrix[i][n_column_select - 1])
+
+numbers_line = []
+for i in range(len(matrix)):
+    numbers_line.append(matrix[n_line_select - 1][i])
+
+print(f"\nThe sum of the main diagonal of a matrix is: {sum_main_diag}")
+
+print(f"\nThe minimum value of the secondary diagonal of the matrix is: ", min(temp_matrix))
+
+print(f"\nThe maximum value of the secondary diagonal of the matrix is: ", max(temp_matrix))
+
+print(f"\nNumbers in this column: ", end="")
+for i in numbers_column:
+    print(i, end=" ")
+print()
+
+print(f"\nNumbers in this line: ", end="")
+for i in numbers_line:
+    print(i, end=" ")
+print()
