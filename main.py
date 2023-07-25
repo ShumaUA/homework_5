@@ -457,3 +457,16 @@
 
 
 
+text1 = list(range(10)) * 2
+print("Initial list:", text1)
+
+text2 = set(text1)
+text2 = list(text2)
+print(f"\nString without duplicates: ", end="")
+for i in text2:
+    print(i, end=" ")
+
+
+
+
+
