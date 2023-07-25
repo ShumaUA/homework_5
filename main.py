@@ -341,85 +341,107 @@
 - ввести з клавіатури порядковий номер одного стовпця і потім іншого стовпця і поміняти їх місцями в матрицю (аналогічно зробити з рядком)
 '''
 
-import random
+# import random
+#
+# matrix = []
+# print()
+#
+# for i in range(10):
+#     matrix.append([])
+#     for j in range(10):
+#         matrix[i].append(random.randint(10, 99))
+# print("<--matrix of random numbers-->")
+#
+# for i in range(len(matrix)):
+#     for j in range(len(matrix)):
+#         print(matrix[i][j], end=" ")
+#     print()
+#
+# sum_main_diag = 0
+# for i in range(len(matrix)):
+#     for j in range(len(matrix)):
+#         if matrix[i] == matrix[j]:
+#             sum_main_diag += matrix[i][j]
+#
+# temp_matrix = []
+# for i in range(len(matrix) - 1, 0, -1):
+#     for j in range(len(matrix)):
+#         if i + j == len(matrix) - 1:
+#             temp_matrix.append(matrix[i][j])
+#
+# print("\nWhich column are you interested in?")
+# n_column_select = int(input("Enter column number from 1 to 10: "))
+# if n_column_select <= 0 or n_column_select > 10:
+#     print("\nIncorrect menu number!")
+#
+# print("\nWhich line are you interested in?")
+# n_line_select = int(input("Enter line number from 1 to 10: "))
+# if n_line_select <= 0 or n_line_select > 10:
+#     print("\nIncorrect menu number!")
+#
+# numbers_column = []
+# for i in range(len(matrix)):
+#     numbers_column.append(matrix[i][n_column_select - 1])
+#
+# numbers_line = []
+# for i in range(len(matrix)):
+#     numbers_line.append(matrix[n_line_select - 1][i])
+#
+# print(f"\nThe sum of the main diagonal of a matrix is: {sum_main_diag}")
+#
+# print(f"\nThe minimum value of the secondary diagonal of the matrix is: ", min(temp_matrix))
+#
+# print(f"\nThe maximum value of the secondary diagonal of the matrix is: ", max(temp_matrix))
+#
+# print(f"\nNumbers in this column: ", end="")
+# for i in numbers_column:
+#     print(i, end=" ")
+# print()
+#
+#
+# print(f"\nNumbers in this line: ", end="")
+# for i in numbers_line:
+#     print(i, end=" ")
+# print()
+#
+#
+# n1_replace_column_select = int(input("\nEnter the first column number to replace from 1 to 10: "))
+# if n1_replace_column_select <= 0 or n1_replace_column_select > 10:
+#     print("\nIncorrect menu number!")
+#
+# n2_replace_column_select = int(input("\nEnter the second column number to replace from 1 to 10: "))
+# if n2_replace_column_select <= 0 or n2_replace_column_select > 10:
+#     print("\nIncorrect menu number!")
+#
+#
+# for i in range(len(matrix)):
+#     matrix[i][n1_replace_column_select -1], matrix[i][n2_replace_column_select -1] = matrix[i][n2_replace_column_select -1], matrix[i][n1_replace_column_select -1]
+#
+# print()
+#
+# for i in range(len(matrix)):
+#     for j in range(len(matrix)):
+#         print(matrix[i][j], end=" ")
+#     print()
+#
+#
+#
+# n1_replace_line_select = int(input("\nEnter the first line number to replace from 1 to 10: "))
+# if n1_replace_line_select <= 0 or n1_replace_line_select > 10:
+#     print("\nIncorrect menu number!")
+#
+# n2_replace_line_select = int(input("\nEnter the second line number to replace from 1 to 10: "))
+# if n2_replace_line_select <= 0 or n2_replace_line_select > 10:
+#     print("\nIncorrect menu number!")
+#
+#
+# matrix[n1_replace_line_select -1], matrix[n2_replace_line_select -1] = matrix[n2_replace_line_select -1], matrix[n1_replace_line_select -1]
+#
+# print()
+#
+# for i in range(len(matrix)):
+#     for j in range(len(matrix)):
+#         print(matrix[i][j], end=" ")
+#     print()
 
-matrix = []
-print()
-
-for i in range(10):
-    matrix.append([])
-    for j in range(10):
-        matrix[i].append(random.randint(10, 99))
-print("<--matrix of random numbers-->")
-
-for i in range(len(matrix)):
-    for j in range(len(matrix)):
-        print(matrix[i][j], end=" ")
-    print()
-
-sum_main_diag = 0
-for i in range(len(matrix)):
-    for j in range(len(matrix)):
-        if matrix[i] == matrix[j]:
-            sum_main_diag += matrix[i][j]
-
-temp_matrix = []
-for i in range(len(matrix) - 1, 0, -1):
-    for j in range(len(matrix)):
-        if i + j == len(matrix) - 1:
-            temp_matrix.append(matrix[i][j])
-
-print("\nWhich column are you interested in?")
-n_column_select = int(input("Enter column number from 1 to 10: "))
-if n_column_select <= 0 or n_column_select > 10:
-    print("\nIncorrect menu number!")
-
-print("\nWhich line are you interested in?")
-n_line_select = int(input("Enter line number from 1 to 10: "))
-if n_line_select <= 0 or n_line_select > 10:
-    print("\nIncorrect menu number!")
-
-numbers_column = []
-for i in range(len(matrix)):
-    numbers_column.append(matrix[i][n_column_select - 1])
-
-numbers_line = []
-for i in range(len(matrix)):
-    numbers_line.append(matrix[n_line_select - 1][i])
-
-print(f"\nThe sum of the main diagonal of a matrix is: {sum_main_diag}")
-
-print(f"\nThe minimum value of the secondary diagonal of the matrix is: ", min(temp_matrix))
-
-print(f"\nThe maximum value of the secondary diagonal of the matrix is: ", max(temp_matrix))
-
-print(f"\nNumbers in this column: ", end="")
-for i in numbers_column:
-    print(i, end=" ")
-print()
-
-print(f"\nNumbers in this line: ", end="")
-for i in numbers_line:
-    print(i, end=" ")
-print()
-
-
-n1_replace_column_select = int(input("\nEnter the first column number to replace from 1 to 10: "))
-if n1_replace_column_select <= 0 or n1_replace_column_select > 10:
-    print("\nIncorrect menu number!")
-
-n2_replace_column_select = int(input("\nEnter the second column number to replace from 1 to 10: "))
-if n2_replace_column_select <= 0 or n2_replace_column_select > 10:
-    print("\nIncorrect menu number!")
-
-
-for i in range(len(matrix)):
-    matrix[i][n1_replace_column_select -1], matrix[i][n2_replace_column_select -1] = matrix[i][n2_replace_column_select -1], matrix[i][n1_replace_column_select -1]
-
-print()
-
-for i in range(len(matrix)):
-    for j in range(len(matrix)):
-        print(matrix[i][j], end=" ")
-    print()
 
