@@ -354,7 +354,7 @@ print("<--matrix of random numbers-->")
 
 for i in range(len(matrix)):
     for j in range(len(matrix)):
-        print(matrix[i][j], end="|")
+        print(matrix[i][j], end=" ")
     print()
 
 sum_main_diag = 0
@@ -402,3 +402,24 @@ print(f"\nNumbers in this line: ", end="")
 for i in numbers_line:
     print(i, end=" ")
 print()
+
+
+n1_replace_column_select = int(input("\nEnter the first column number to replace from 1 to 10: "))
+if n1_replace_column_select <= 0 or n1_replace_column_select > 10:
+    print("\nIncorrect menu number!")
+
+n2_replace_column_select = int(input("\nEnter the second column number to replace from 1 to 10: "))
+if n2_replace_column_select <= 0 or n2_replace_column_select > 10:
+    print("\nIncorrect menu number!")
+
+
+for i in range(len(matrix)):
+    matrix[i][n1_replace_column_select -1], matrix[i][n2_replace_column_select -1] = matrix[i][n2_replace_column_select -1], matrix[i][n1_replace_column_select -1]
+
+print()
+
+for i in range(len(matrix)):
+    for j in range(len(matrix)):
+        print(matrix[i][j], end=" ")
+    print()
+
