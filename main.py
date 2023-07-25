@@ -456,17 +456,41 @@
 '''
 
 
+########################### 1.Створити список чисел. Заберіть дублікати значень. Вивести унікальні значення.
 
-text1 = list(range(10)) * 2
-print("Initial list:", text1)
+# text1 = list(range(10)) * 2
+# print("Initial list:", text1)
+#
+# text2 = set(text1)
+# text2 = list(text2)
+# print(f"\nString without duplicates: ", end="")
+# for i in text2:
+#     print(i, end=" ")
 
-text2 = set(text1)
-text2 = list(text2)
-print(f"\nString without duplicates: ", end="")
-for i in text2:
-    print(i, end=" ")
+########################### 2.Дано два списки чисел.Порахуйте, скільки чисел міститься як у першому списку, і у другому.
+
+# text1 = list(range(10))
+# text2 = list(range(10)) * 2
+#
+# print("The number of numbers in the first list is: ", len(text1))
+# print("The number of numbers in the second list is: ", len(text2))
+
+
+########################### 3. Даний текст: у першому рядку записано число рядків, далі йдуть самі рядки.
+# Визначте, скільки різних слів міститься у цьому тексті.
+# Словом вважається послідовність непробільних символів, що йдуть поспіль, слова розділені одним або більшим числом пробілів або символами кінця рядка.
 
 
 
-
-
+# input_numbers_line = int(input("Enter the number of lines in the text: "))
+# text = str(input_numbers_line)
+#
+# n = 0
+# while n == 0 or n != input_numbers_line:
+#     text += "\n" + input("Enter text: ")
+#     n += 1
+#
+# temp_text = text.lower().split()
+# diff_words = set(temp_text)
+#
+# print("\nThe number of different words in the text:", len(diff_words), end=".")
