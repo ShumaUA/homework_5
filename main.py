@@ -494,3 +494,41 @@
 # diff_words = set(temp_text)
 #
 # print("\nThe number of different words in the text:", len(diff_words), end=".")
+
+
+
+'''
+1. Наведено список країн і міст кожної країни. Для кожного міста вкажіть, в якій країні воно знаходиться.
+Приклад результату:
+{"Ukraine": ["Kyiv", "Lviv", "Dnipro"],"USA": ["Los Angeles", "Las Vegas"]}
+2. Дано два списки однакової довжини. Необхідно створити з них словник таким чином, щоб елементи першого списку були ключами, а елементи другого відповідно значеннями нашого словника.
+'''
+
+
+########################### 1.
+
+
+
+# country = ["Ukraine", "USA"]
+# Ukraine = ["Kyiv", "Lviv", "Dnipro"]
+# USA = ["Los Angeles", "Las Vegas"]
+#
+# dictionary = {}
+# dictionary["Ukraine"], dictionary["USA"] = Ukraine, USA
+#
+#
+# print(dictionary)
+
+
+
+########################### 2.
+
+# str_1 = list(range(10))
+# str_2 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
+#
+# dictionary = {}
+#
+# for i in range(len(str_1)):
+#     dictionary[str_1[i]] = str_2[i]
+#
+# print(dictionary)
