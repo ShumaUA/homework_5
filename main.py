@@ -559,9 +559,14 @@
 Функція повертає новий список, який містить отримані результати.
 '''
 
+###################################  variables  ###################################
 
+x = [2, 3, 12.2, 14.5, 17.7, 5, 7, 2, 8, 3, 2]
+y = [3, 5, 9, 12, 34.5, 23, 56, 21.4]
+x_find = 2
 
 ################################### task_6_1 ###############################################
+
 
 
 def multi_int_list(list_input: list) -> int:
@@ -621,6 +626,7 @@ def find_remove_int_list(list_input: list, find_number: int) -> int:
     count = list_input.count(find_number)
     for i in range(count):
         list_input.remove(find_number)
+
     return count
 
 
@@ -629,11 +635,29 @@ def find_remove_int_list(list_input: list, find_number: int) -> int:
 
 
 
+def add_lists(list_input_1: list, list_input_2: list) -> list:
+    new_list = list_input_1 + list_input_2
+
+    return new_list
 
 
 
-x = [2, 3, 12.2, 14.5, 17.7, 5, 7, 2, 8, 3, 2]
-x_find = 2
+################################### task_6_6 ###############################################
+
+
+
+def exponentiation_int_list(list_input: list, exponent: int) -> list:
+    temp_list = []
+    for i in range(len(list_input)):
+        temp_list.append(list_input[i] ** exponent)
+
+    return temp_list
+
+
+
+
+
+
 
 print(f"\nMultiplication of list integers is: {multi_int_list(x)}", end=".")
 print()
@@ -647,3 +671,9 @@ print()
 print(f"\nRemoved values from the list is: ", find_remove_int_list(x, x_find), end=".")
 print()
 print(x)
+
+print("\nNew list : ")
+print(add_lists(x, y))
+
+print("\nNew list : ")
+print(exponentiation_int_list(x, x_find))
