@@ -569,9 +569,81 @@ def multi_int_list(list_input: list) -> int:
     for i in range(len(list_input)):
         if int(list_input[i]) == list_input[i]:
             multi_int *= list_input[i]
-    print(f"\nMultiplication of list integers is: {multi_int}", end=".")
-    print()
+
+    return multi_int
 
 
 
 ################################### task_6_2 ###############################################
+
+
+
+def min_int_list(list_input: list) -> int:
+    temp_list = []
+    for i in range(len(list_input)):
+        if int(list_input[i]) == list_input[i]:
+            temp_list.append(list_input[i])
+
+    min_int_list_result = min(temp_list)
+    return min_int_list_result
+
+
+
+
+################################### task_6_3 ###############################################
+
+
+
+def prime_int_list(list_input: list) -> int:
+    temp_list = []
+    prime_list = []
+    for i in range(len(list_input)):
+        if int(list_input[i]) == list_input[i]:
+            temp_list.append(list_input[i])
+    for j in range(len(temp_list)):
+        _ = 0
+        for k in range(1, temp_list[j] + 1):
+            if temp_list[j] % k == 0:
+                _ += 1
+        if _ == 2:
+            prime_list.append(temp_list[j])
+
+    len_prime_list = len(prime_list)
+    return len_prime_list
+
+
+
+################################### task_6_4 ###############################################
+
+
+
+def find_remove_int_list(list_input: list, find_number: int) -> int:
+    count = list_input.count(find_number)
+    for i in range(count):
+        list_input.remove(find_number)
+    return count
+
+
+
+################################### task_6_5 ###############################################
+
+
+
+
+
+
+x = [2, 3, 12.2, 14.5, 17.7, 5, 7, 2, 8, 3, 2]
+x_find = 2
+
+print(f"\nMultiplication of list integers is: {multi_int_list(x)}", end=".")
+print()
+
+print(f"\nMinimum number of list integers is: ", min_int_list(x), end=".")
+print()
+
+print(f"\nThe number of primes in the list is: ", prime_int_list(x), end=".")
+print()
+
+print(f"\nRemoved values from the list is: ", find_remove_int_list(x, x_find), end=".")
+print()
+print(x)
