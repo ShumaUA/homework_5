@@ -675,5 +675,5 @@ print(x)
 print("\nNew list : ")
 print(add_lists(x, y))
 
-print("\nNew list : ")
+print(f"\nNew list raised to the power of {x_find}  : ")
 print(exponentiation_int_list(x, x_find))
